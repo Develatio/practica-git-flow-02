@@ -1,3 +1,9 @@
 .tab4 {
   /* ... */
 }
+table,td,th{
+  border: 2px solid black;
+}
+td,th{
+  padding: 5px;
+}

@@ -1,3 +1,15 @@
 .tab4 {
-  /* ... */
+}
+
+* {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #fff;
+  background-color: #111;
+}
+
+img {
+  text-align: center;
+  border-radius: 5px;
+  width: 800px;
+  height: 550px;
 }

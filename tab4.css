@@ -1,6 +1,37 @@
 .tab4 {
   /* ... */
 }
+
+#cuadro {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: relative;
+  animation: movimiento 1s infinite;
+}
+
+@keyframes movimiento {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  25% {
+    top: 200px;
+    left: 0px;
+  }
+  50% {
+    top: 200px;
+    left: 200px;
+  }
+  75% {
+    top: 0px;
+    left: 200px;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+  } 
+}
 * {
   padding: 0;
   margin: 0;

@@ -1,4 +1,5 @@
 .tab2 {
+<<<<<<< HEAD
   /* ... */
 }
 div{
@@ -6,4 +7,8 @@ div{
 }
 h4{
   color: blue;
+=======
+  background-color: #111;
+  color: #fff;
+>>>>>>> develatio/develop
 }

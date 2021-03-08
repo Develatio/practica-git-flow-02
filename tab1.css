@@ -19,7 +19,8 @@ button {
 }
 
 button:hover {
-  background-color: #ddd;
+  background-color: black;
+  color: white;
 
 }
 
@@ -32,5 +33,5 @@ textarea {
   font-size: 2vw;
   width: 100%;
   border: none;
-  text-align: right;
+  text-align: center;
 }

@@ -5,6 +5,42 @@
     <title>Pestaña 5</title>
     <script src="/tab5.js"></script>
     <link rel="stylesheet" href="/tab5.css" />
+	
+	<style>
+        .padre {
+            display: flex;
+            height: auto;
+            border: solid 1px red;
+            background-color: grey;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+        }
+        
+        .son1 {
+            width: 400px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            background-color: white;
+            border: solid 1px #1c4051;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+            display: inline-block;
+        }
+        
+        .boton {
+            margin-right: 30px;
+            height: 50px;
+            width: 80px;
+            font-size: 0.7em;
+        }
+        .text {
+            margin-left: 10px;
+        }
+    </style>
   </head>
 
   <body>
@@ -12,7 +48,62 @@
       <h1>Pestaña 5</h1>
       <hr>
       <div>
-        ...
+		<div class="padre">
+			<div class="son1">
+			   <form method="post" action="pptls.php">
+				<a>(El codigo php en bruto)</a>
+				   <table style="width:100%">
+				   <tr>
+					   <th colspan="3">Juega tu mano:</th>
+				   </tr>
+				   <tr>
+					   <th colspan="3"><hr></th>
+				   </tr>
+				   <tr>
+					  <td></td>
+					   <td style="text-align: left; width: 150px">
+						   <input type="radio" name="game" value="Piedra"> Piedra
+					   </td>
+					   <td></td>
+				   </tr>
+				   <tr>
+					  <td></td>
+					   <td style="text-align: left; width: 150px">
+						   <input type="radio" name="game" value="Papel"> Papel
+					   </td>
+					   <td></td>
+				   </tr>
+				   <tr>
+					  <td></td>
+					   <td style="text-align: left; width: 150px">
+						   <input type="radio" name="game" value="Tijera"> Tijera
+					   </td>
+					   <td></td>
+				   </tr>
+				   <tr>
+					  <td></td>
+					   <td style="text-align: left; width: 150px">
+						   <input type="radio" name="game" value="Lagarto"> Lagarto
+					   </td>
+					   <td></td>
+				   </tr>
+				   <tr>
+					  <td></td>
+					   <td style="text-align: left; width: 150px">
+						   <input type="radio" name="game" value="Spock"> Spock
+					   </td>
+					   <td></td>
+				   </tr>
+				   <tr>
+					   <th colspan="3"><hr></th>
+				   </tr>
+				   <tr>
+					   <td colspan="3"><input class="boton" type="submit" value="enviar"></td>
+				   </tr>               
+				   </table>
+			   </form>
+			</div>
+		</div>
       </div>
     </div>
   </body>

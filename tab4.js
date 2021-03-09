@@ -81,20 +81,20 @@ function collisionDetection() {
 }
 
 function drawBall() {
-    ctx.beginPath()
-    ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight)
-    ctx.fillStyle = 'green'
-    ctx.fill()
-    ctx.closePath()
+ctx.beginPath()
+ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight)
+ctx.fillStyle = 'green'
+ctx.fill()
+ctx.closePath()
 }
 
 
 function drawPaddle() {
-    ctx.beginPath();
-    ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "green";
-    ctx.fill();
-    ctx.closePath();
+ctx.beginPath();
+ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+ctx.fillStyle = "green";
+ctx.fill();
+ctx.closePath();
 }
 
 function drawBricks() {
@@ -116,25 +116,25 @@ function drawBricks() {
 }
 
 function drawScore() {
-    ctx.font = '16px Arial'
-    ctx.fillStyle = 'green'
-    ctx.fillText('Score: ' + score, 8, 20)
+ctx.font = '16px Arial'
+ctx.fillStyle = 'green'
+ctx.fillText('Score: ' + score, 8, 20)
 }
 
 function drawLives() {
-    ctx.font = '16px Arial'
-    ctx.fillStyle = 'green'
-    ctx.fillText('Lives: ' + lives, canvas.width - 65, 20)
+ctx.font = '16px Arial'
+ctx.fillStyle = 'green'
+ctx.fillText('Lives: ' + lives, canvas.width - 65, 20)
 }
 
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-    drawBricks()
-    drawBall()
-    drawPaddle()
-    drawScore()
-    drawLives()
-    collisionDetection()
+ctx.clearRect(0, 0, canvas.width, canvas.height)
+drawBricks()
+drawBall()
+drawPaddle()
+drawScore()
+drawLives()
+collisionDetection()
 
     if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
         dx = -dx

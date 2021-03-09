@@ -88,7 +88,7 @@ function drawPaddle() {
     ctx.closePath()
 }
 function drawBricks() {
-    for (c = 0; c < brickColumnCount; c++) {
+  for (c = 0; c < brickColumnCount; c++) {
         for (r = 0; r < brickRowCount; r++) {
             if (bricks[c][r].status == 1) {
                 var brickX = (r * (brickWidth + brickPadding)) + brickOffsetLeft
@@ -102,7 +102,7 @@ function drawBricks() {
                 ctx.closePath()
             }
         }
-    }
+  }
 }
 function drawScore() {
     ctx.font = '16px Arial'

@@ -1,3 +1,4 @@
+function startJS(){
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var ballRadius = 10;
@@ -163,3 +164,5 @@ requestAnimationFrame(draw);
 }
 
 draw();
+}
+window.onload=startJS;

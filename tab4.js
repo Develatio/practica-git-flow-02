@@ -28,9 +28,9 @@ for (c = 0; c < brickColumnCount; c++) {
     }
 }
 
-document.addEventListener("keydown", keyDownHandler, false)
-document.addEventListener("keyup", keyUpHandler, false)
-document.addEventListener("mousemove", mouseMoveHandler, false)
+document.addEventListener('keydown', keyDownHandler, false)
+document.addEventListener('keyup', keyUpHandler, false)
+document.addEventListener('mousemove', mouseMoveHandler, false)
 
 function keyDownHandler(e) {
     if (e.keyCode == 39) {
@@ -64,7 +64,7 @@ function collisionDetection() {
                     b.status = 0
                     score++
                     if (score == brickRowCount * brickColumnCount) {
-                        alert("YOU WIN, CONGRATS!")
+                        alert('YOU WIN, CONGRATS!')
                         document.location.reload()
                     }
                 }
@@ -76,14 +76,14 @@ function collisionDetection() {
 function drawBall() {
     ctx.beginPath()
     ctx.arc(x, y, ballRadius, 0, Math.PI * 2)
-    ctx.fillStyle = "#0095DD"
+    ctx.fillStyle = '#0095DD'
     ctx.fill()
     ctx.closePath()
 }
 function drawPaddle() {
     ctx.beginPath()
     ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight)
-    ctx.fillStyle = "#0095DD"
+    ctx.fillStyle = '#0095DD'
     ctx.fill()
     ctx.closePath()
 }
@@ -97,7 +97,7 @@ function drawBricks() {
                 bricks[c][r].y = brickY
                 ctx.beginPath()
                 ctx.rect(brickX, brickY, brickWidth, brickHeight)
-                ctx.fillStyle = "#0095DD"
+                ctx.fillStyle = '#0095DD'
                 ctx.fill()
                 ctx.closePath()
             }
@@ -105,14 +105,14 @@ function drawBricks() {
     }
 }
 function drawScore() {
-    ctx.font = "16px Arial"
-    ctx.fillStyle = "#0095DD"
-    ctx.fillText("Score: " + score, 8, 20)
+    ctx.font = '16px Arial'
+    ctx.fillStyle = '#0095DD'
+    ctx.fillText('Score: ' + score, 8, 20)
 }
 function drawLives() {
-    ctx.font = "16px Arial"
-    ctx.fillStyle = "#0095DD"
-    ctx.fillText("Lives: " + lives, canvas.width - 65, 20)
+    ctx.font = '16px Arial'
+    ctx.fillStyle = '#0095DD'
+    ctx.fillText('Lives: ' + lives, canvas.width - 65, 20)
 }
 
 function draw() {
@@ -137,7 +137,7 @@ function draw() {
         else {
             lives--
             if (!lives) {
-                alert("GAME OVER")
+                alert('GAME OVER')
                 document.location.reload()
             }
             else {

@@ -1,0 +1,44 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  linter-html:
+    name: Linter de HTML
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonando código
+        uses: actions/checkout@v2
+
+      # https://github.com/marketplace/actions/html5-validator-experimental
+      - name: Ejecutando html5validator
+        uses: Cyb3r-Jak3/html5validator-action@master
+        with:
+          root: ./
+
+  linter-js:
+    name: Linter de Javascript
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonando código
+        uses: actions/checkout@v2
+
+      # https://github.com/marketplace/actions/sane-fmt
+      - name: Ejecutando eslint
+        uses: KSXGitHub/github-actions-sane-fmt@master
+
+  deploy_pro:
+    if: github.ref == 'refs/heads/master'
+    needs: [linter-html, linter-js]
+    name: Despliegue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonando código
+        uses: actions/checkout@v2
+
+      - name: Despliegue a producción
+        env:
+          priv_key: ${{ secrets.PRIV_KEY }}
+        run: |
+          echo "$priv_key" > /tmp/priv_key.pem && chmod 400 /tmp/priv_key.pem
+          rsync --rsync-path="sudo rsync" -azP -e "ssh -o StrictHostKeyChecking=no -i /tmp/priv_key.pem" . admin@35.180.29.41:/var/www/html/

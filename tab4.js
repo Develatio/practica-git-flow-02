@@ -31,15 +31,16 @@ for (r = 0; r < brickRowCount; r++) {
 }
 
 
-document.addEventListener("keydown", keyDownHandler, false)
-document.addEventListener("keyup", keyUpHandler, false)
-document.addEventListener("mousemove", mouseMoveHandler, false)
+
+document.addEventListener('keydown', keyDownHandler, false)
+document.addEventListener('keyup', keyUpHandler, false)
+document.addEventListener('mousemove', mouseMoveHandler, false)
 
 function keyDownHandler(e) {
     if (e.keyCode == 39) {
         rightPressed = true
     } else if (e.keyCode == 37) {
-        leftPressed = true;
+        leftPressed = true
     }
 }
 

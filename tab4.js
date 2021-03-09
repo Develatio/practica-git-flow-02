@@ -21,9 +21,9 @@ var score = 0
 var lives = 3
 
 var bricks = []
-for (c = 0 c < brickColumnCount c++) {
+for (c = 0; c < brickColumnCount; c++) {
     bricks[c] = []
-    for (r = 0 r < brickRowCount r++) {
+    for (r = 0; r < brickRowCount; r++) {
         bricks[c][r] = { x: 0, y: 0, status: 1 }
     }
 }
@@ -55,8 +55,8 @@ function mouseMoveHandler(e) {
     }
 }
 function collisionDetection() {
-    for (c = 0 c < brickColumnCount c++) {
-        for (r = 0 r < brickRowCount r++) {
+    for (c = 0; c < brickColumnCount; c++) {
+        for (r = 0; r < brickRowCount; r++) {
             var b = bricks[c][r]
             if (b.status == 1) {
                 if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
@@ -88,8 +88,8 @@ function drawPaddle() {
     ctx.closePath()
 }
 function drawBricks() {
-    for (c = 0 c < brickColumnCount c++) {
-        for (r = 0 r < brickRowCount r++) {
+    for (c = 0; c < brickColumnCount; c++) {
+        for (r = 0; r < brickRowCount; r++) {
             if (bricks[c][r].status == 1) {
                 var brickX = (r * (brickWidth + brickPadding)) + brickOffsetLeft
                 var brickY = (c * (brickHeight + brickPadding)) + brickOffsetTop

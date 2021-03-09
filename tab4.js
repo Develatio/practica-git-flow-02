@@ -20,9 +20,9 @@ var brickOffsetLeft = 30
 var score = 0
 var lives = 3
 
-var bricks = [];
+var bricks = []
 for (c = 0; c < brickColumnCount; c++) {
-    bricks[c] = []
+bricks[c] = []
     for (r = 0; r < brickRowCount; r++) {
         bricks[c][r] = {
             x: 0,

@@ -161,5 +161,4 @@ x += dx;
 y += dy;
 requestAnimationFrame(draw);
 }
-
 draw();

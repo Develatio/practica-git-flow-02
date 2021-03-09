@@ -1,36 +1,36 @@
 div.calc {
-  background-color: #ccc;
-  margin: 0px auto;
-  width: fit-content;
-  height: auto;
-  padding: 1.5vw;
-  box-shadow: 2px 2px 5px gray;
+    background-color: gray;
+    margin: 0px auto;
+    width: fit-content;
+    height: auto;
+    padding: 1.5vw;
+    box-shadow: 2px 2px 5px black;
 }
 
 button {
-  background-color: white;
-  font-size: 1.5vw;
-  border: none;
-  height: 2.6vw;
-  width: 2.6vw;
-  margin: 5px;
-  box-shadow: 2px 2px 5px gray;
-  transition: 0.2s;
+    background-color: white;
+    font-size: 1.5vw;
+    border: none;
+    height: 2.6vw;
+    width: 2.6vw;
+    margin: 5px;
+    box-shadow: 2px 2px 5px gray;
+    transition: 0.2s;
 }
 
 button:hover {
-  background-color: #ddd;
-
+    background-color: #ddd;
 }
 
 button:focus {
-  outline: none;
+    outline: none;
 }
 
 textarea {
-  margin: 0px auto;
-  font-size: 2vw;
-  width: 100%;
-  border: none;
-  text-align: right;
+    margin: 0px auto;
+    font-size: 2vw;
+    width: 100%;
+    border: none;
+    text-align: right;
+    background-color: yellow;
 }
